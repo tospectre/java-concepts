@@ -1,4 +1,4 @@
-package com.spectre.udemycourses.laptop.components;
+package com.spectre.courses.laptop.components;
 
 public class GraphicsCard {
     private String brand;

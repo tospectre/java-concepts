@@ -1,9 +1,9 @@
-package com.spectre.udemycourses.polymorphisme;
+package com.spectre.courses.polymorphisme;
 
-public class UdemyPolymorphisme {
+public class Polymorphisme {
     private String model;
 
-    public UdemyPolymorphisme(String model) {
+    public Polymorphisme(String model) {
         this.model = model;
     }
 

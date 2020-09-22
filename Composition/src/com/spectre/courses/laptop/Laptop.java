@@ -1,8 +1,7 @@
-package com.spectre.udemycourses.laptop;
+package com.spectre.courses.laptop;
 
-import com.spectre.udemycourses.laptop.components.GraphicsCard;
-import com.spectre.udemycourses.laptop.components.Processor;
-import org.omg.PortableInterceptor.SUCCESSFUL;
+import com.spectre.courses.laptop.components.GraphicsCard;
+import com.spectre.courses.laptop.components.Processor;
 
 public class Laptop {
     private float screen;
