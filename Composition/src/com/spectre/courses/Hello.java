@@ -19,10 +19,10 @@ public class Hello {
         gamingLaptop.gamingMod();
         System.out.println("Gaming Mode On");
         System.out.println(gamingLaptop.getProcessor().getFrequency());
-/*
+
         Polymorphisme polymorphisme = new Polymorphisme("Nokia 3310");
         System.out.println(polymorphisme.getModel());
-        polymorphisme.features();*/
+        polymorphisme.features();
 
         SamsungNote8 samsungNote8 = new SamsungNote8("Note 8");
         System.out.println(samsungNote8.getModel());
