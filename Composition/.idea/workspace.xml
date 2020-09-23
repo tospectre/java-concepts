@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e706b740-34f2-4078-b5a3-52d84c3709d2" name="Default" comment="">
+    <list default="true" id="e706b740-34f2-4078-b5a3-52d84c3709d2" name="Default" comment="Uncomment the sout of polymorphisme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/spectre/courses/Hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/spectre/courses/Hello.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,8 +137,16 @@
       <workItem from="1599685315130" duration="9974000" />
       <workItem from="1600350890313" duration="2033000" />
       <workItem from="1600808462588" duration="2297000" />
-      <workItem from="1600849979210" duration="601000" />
+      <workItem from="1600849979210" duration="1108000" />
     </task>
+    <task id="LOCAL-00001" summary="Uncomment the sout of polymorphisme">
+      <created>1600850822637</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600850822637</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,12 +154,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Uncomment the sout of polymorphisme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Uncomment the sout of polymorphisme" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="439" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600808610150">
       <screen x="42" y="0" width="1878" height="1080" />
     </state>
     <state x="439" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/42.0.1878.1080@42.0.1878.1080" timestamp="1600808610150" />
+    <state x="432" y="51" width="1090" height="975" key="CommitChangelistDialog2" timestamp="1600850821854">
+      <screen x="42" y="0" width="1878" height="1080" />
+    </state>
+    <state x="432" y="51" width="1090" height="975" key="CommitChangelistDialog2/42.0.1878.1080@42.0.1878.1080" timestamp="1600850821854" />
     <state x="141" y="100" width="1680" height="881" key="DiffContextDialog" timestamp="1600808692913">
       <screen x="42" y="0" width="1878" height="1080" />
     </state>
@@ -173,6 +187,10 @@
       <screen x="42" y="0" width="1878" height="1080" />
     </state>
     <state width="1836" height="431" key="GridCell.Tab.0.right/42.0.1878.1080@42.0.1878.1080" timestamp="1600810760603" />
+    <state x="781" y="455" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600850867242">
+      <screen x="42" y="0" width="1878" height="1080" />
+    </state>
+    <state x="781" y="455" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/42.0.1878.1080@42.0.1878.1080" timestamp="1600850867242" />
   </component>
   <component name="masterDetails">
     <states>

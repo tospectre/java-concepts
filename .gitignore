@@ -1,2 +1,5 @@
-out/*
-Composition/out/*
+Composition/Composition.iml
+.idea/$CACHE_FILE$ .idea/encodings.xml .idea/java-concepts.iml .idea/misc.xml .idea/modules.xml .idea/vcs.xml .idea/workspace.xml .idea/ZeppelinRemoteNotebooks
+out/production
+Composition/.idea/encodings.xml Composition/.idea/misc.xml Composition/.idea/modules.xml Composition/.idea/vcs.xml Composition/.idea/workspace.xml Composition/.idea/ZeppelinRemoteNotebooks
+Composition/out/production
