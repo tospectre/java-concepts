@@ -1,4 +1,4 @@
-package com.spectre.udemyexercices.animals.fish;
+package com.spectre.exercices.animals.fish;
 
 public class Eel extends Fish {
     private String special;

@@ -1,6 +1,6 @@
-package com.spectre.udemyexercices.animals.reptile;
+package com.spectre.exercices.animals.reptile;
 
-import com.spectre.udemyexercices.animals.Animal;
+import com.spectre.exercices.animals.Animal;
 
 public class Reptile extends Animal {
     protected String skin;

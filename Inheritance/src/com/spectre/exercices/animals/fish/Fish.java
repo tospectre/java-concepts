@@ -1,6 +1,6 @@
-package com.spectre.udemyexercices.animals.fish;
+package com.spectre.exercices.animals.fish;
 
-import com.spectre.udemyexercices.animals.Animal;
+import com.spectre.exercices.animals.Animal;
 
 public class Fish extends Animal {
     protected String livingArea;

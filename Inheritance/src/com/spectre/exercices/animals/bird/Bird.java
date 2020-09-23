@@ -1,6 +1,6 @@
-package com.spectre.udemyexercices.animals.bird;
+package com.spectre.exercices.animals.bird;
 
-import com.spectre.udemyexercices.animals.Animal;
+import com.spectre.exercices.animals.Animal;
 
 public class Bird extends Animal {
     protected boolean feather = true;

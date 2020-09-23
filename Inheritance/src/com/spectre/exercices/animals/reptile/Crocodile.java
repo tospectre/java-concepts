@@ -1,4 +1,4 @@
-package com.spectre.udemyexercices.animals.reptile;
+package com.spectre.exercices.animals.reptile;
 
 public class Crocodile extends Reptile {
     public Crocodile() {

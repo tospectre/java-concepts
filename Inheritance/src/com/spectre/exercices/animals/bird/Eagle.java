@@ -1,4 +1,4 @@
-package com.spectre.udemyexercices.animals.bird;
+package com.spectre.exercices.animals.bird;
 
 public class Eagle extends Bird {
 
