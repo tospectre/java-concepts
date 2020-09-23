@@ -1,4 +1,4 @@
-package com.spectre.udemyexercices.phone;
+package com.spectre.exercices.phone;
 
 public class Iphone8 implements Phone {
     @Override

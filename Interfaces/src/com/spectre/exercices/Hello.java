@@ -1,8 +1,8 @@
-package com.spectre.udemyexercices;
+package com.spectre.exercices;
 
-import com.spectre.udemyexercices.phone.Iphone8;
-import com.spectre.udemyexercices.phone.OnePlus5;
-import com.spectre.udemyexercices.phone.Phone;
+import com.spectre.exercices.phone.Iphone8;
+import com.spectre.exercices.phone.OnePlus5;
+import com.spectre.exercices.phone.Phone;
 
 public class Hello {
     public static void main(String[] args) {
