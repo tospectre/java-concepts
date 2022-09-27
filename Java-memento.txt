@@ -73,8 +73,11 @@ Java est un language fortement typé.
 	. L'heritage permet à un objet d'avoir les mêmes methodes et attributs qu'un objet parent.
 	. Cela évite d'avoir à recoder des methodes générique.
 	. Une class fille hérite des même caractéristiques qu'une class mère.
-	- Permet de spécialiser une classe. Ajouter ou modifier le comportement d'une classe, étendre son fonctionnement.
+	. Permet de spécialiser une classe. Ajouter ou modifier le comportement d'une classe, étendre son fonctionnement.
 	. En Java, l'héritage multiple n'est pas autorisé car il peut y avoir des ambiguités dans les noms de méthode et cela peut faire une pile d'exeption et faire planter l'application.
+	. Toutes que l'on créée hérite forcémenet (implicitement) de la classe Object.
+        - Il est interessant de redéfinir la méthode toString() de la classe Object dans nos propre classe.
+        - Une bonne pratique serait de toujours redéfinir cette méthode, car elle permet d'obtenir une représentation, en chaîne de caractères, de chaque instance de notre classe
 
 5 => Le polymorphisme :
 	. Ce concept complète celui de l'heritage.
