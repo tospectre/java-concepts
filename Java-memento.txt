@@ -13,10 +13,36 @@ double 	       |      Nombre réel double précision allant de 4.9 * 10-324 à +
 char 	       |      Caractère unicode (65536 caractères possibles) 	                   |       2 octets
 boolean 	   |      variable booléenne (valeurs : vrai ou faux) 	                       |       1 octet
 
+Quel est le but de la méthode public static void main dans un programme Java ?
+    - 
+    
+Quelle est la différence entre System.out.println et System.err.println ?
+    -
+    
+Qu'est-ce qu'une interface en Java ?
+    - une interface represent une capacité que l'on shouaite donner à une classe
 
+Quand utiliseriez-vous une classe abstraite plutôt qu'une interface ?
+    
+
+Quelles sont les différences entre une méthode publique et une méthode protégée ?
+Qu'est-ce qu'une variable statique ?
+Qu'est-ce qu'une exception en Java ?
+Est-ce une bonne pratique d'attraper une RuntimeException ?
+Quel est le mot-clé à utiliser dans la signature d'une méthode pour permettre la non-réception d'une exception dans cette méthode ?
+    - throws
+Quelle est la dernière version de Java ?
+A quoi sert un garbage collector ?
+Quelle est la différence entre un HashSet et un TreeSet ?
+Quelle méthode Thread est appelée lorsqu'un thread démarre ?
+Est-il possible de mettre à jour un objet String (sans utiliser l'introspection) ?
+Quel est le contrat entre les méthodes equals et hashcode ?
+Qui est James Gosling ?
 
 
 Java Concept à assimiler :
+
+Les imports static permets de pouvoir utiliser tous les champs statics ou toutes les méthodes static d'une classe ou d'une interface.
 
 Java est un language fortement typé.
 
@@ -226,8 +252,7 @@ Java est un language fortement typé.
 18 => Redéfinition covariante des méthodes
 		. La redéfinition d'une méthode c'est lorsque une méthode d'une classe mère est redéfinie dans une class fille
 		. La redéfinition doit forcément avoir la même signature.
-		. La surcharge de méthodes (Methode overloading / voir Le point 2) c'est lorsqu'une méthode d'une classe mère est redéfinie dans une classe fille et que ses arguments sont diffèrent des arguments 
-		  de la fonction initiale.
+		. La surcharge de méthodes (Methode overloading / voir Le point 2) c'est lorsqu'une méthode d'une classe mère est redéfinie dans une classe fille et que ses arguments sont diffèrent des arguments de la fonction initiale.
 
 19 => Les Enums ou types Enumérés
 		. Une Enumération est un groupement logique de constantes (Ex : NORD, SUD, EST, OUEST) dont la valeur, le contenu, n'a que peu d'importance
@@ -237,12 +262,7 @@ Java est un language fortement typé.
 		. Dans la pluspart des languages de programmation, les énumeration se limitent à une collection de constantes.
 		. En Java, une énumération est un réél objet. Donc il a accès à des méthodes.
 		. Une énumération peut donc avoir un ou plusieur constructeurs (toujours privé).
-		
-		
-		
-		
-		
-		
+
 
 =====================================================================================================================
 												HIBERNATE
@@ -294,7 +314,7 @@ Site Initializr de Spring boot > start.spring.io > Spring Boot Starters
 
 =========== L'injection de dépendance ============== : Permet de valoriser les propriétés de chaques composants, à la volé en passant par les setteurs de ses propriétés.
 
-=========== L'inversion de contrôle (IOC) ============== : C'est le premier principe de Spring, il permet de créer les composants des différentes couches applicative, et de le mettre en relation.
+=========== L'inversion de contrôle (IOC) ============== : C'est le premier principe de Spring, il permet de créer les composants des différentes couches applicative, et de les mettreent en relation.
 
 =========== le conteneur léger SPRING ============== : conciste en un fichier de configuration .xml qui permettra à spring d'instancier les bonnes classe, et faire l'inversion de contrôle.
 
