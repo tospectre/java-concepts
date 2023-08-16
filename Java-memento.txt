@@ -14,21 +14,35 @@ char 	       |      Caractère unicode (65536 caractères possibles) 	          
 boolean 	   |      variable booléenne (valeurs : vrai ou faux) 	                       |       1 octet
 
 Quel est le but de la méthode public static void main dans un programme Java ?
-    - 
+    - C'est le point d'entré d'un programme. C'est par cette méthode que ce programme démmare.
     
 Quelle est la différence entre System.out.println et System.err.println ?
-    -
+    - System.out.println() écrit sur la sortie standard, alors que System.err.println() écrit sur la sortie d'erreur.
     
 Qu'est-ce qu'une interface en Java ?
     - une interface represent une capacité que l'on shouaite donner à une classe
 
-Quand utiliseriez-vous une classe abstraite plutôt qu'une interface ?
+Qu'elle est la différence entre une classe abstraite et une interface ?
+    - Une classe abstraite est une classe qui ne peut pas être instancié, alors qu'une interface ce n'est pas une classe mais un type.
+    - Une interface contient uniquement des méthodes abstraite alors qu'une classe abstraite contient au moins une méthodes abstraite ou + mais peut aussi contenir des méthodes classiques.
+    - Une interface ne peut contenir que des methodes public alors qu'une classe abstraite peut avoir des méthodes protected ou private.
     
+Quand utiliseriez-vous une classe abstraite plutôt qu'une interface ?
+    - Généralement, on utilise les classes abstraites quand on sait qu'on aura une relation très forte au niveau de nos différentes classes, alors que pour une interface, on a pas vraiment besoin d'une relation forte.
+    - On utlisera une interface plutôt qu'une classe abstraite dans le cas ou on voudrai simuler de l'heritage multiple. ça evite d'avoir le fameux diamond problem.
+    - Aussi on utilise les interfaces quand on veut définir une structure dont on sait qu'elle ne vas pas changer beaucoup.
 
-Quelles sont les différences entre une méthode publique et une méthode protégée ?
+
+Quelles sont les différences entre une méthode public et une méthode protected ?
 Qu'est-ce qu'une variable statique ?
+    - ce sont essentiellement des variables globales - toutes les intances de la classe partage la même variable
 Qu'est-ce qu'une exception en Java ?
+Qu'est-ce qu'une checkException en Java ?
+    - C'est une exception que java nous oblige à traiter d'une manière ou d'une autre au moment de la compilation
+Qu'est-ce qu'une unCheckedException en Java ?
+    - C'est une exception que java ne check pas au moment de la compilation
 Est-ce une bonne pratique d'attraper une RuntimeException ?
+	- Oui car cela permet de ne pas se retrouver avec des exceptions dont on ignore la provenance.
 Quel est le mot-clé à utiliser dans la signature d'une méthode pour permettre la non-réception d'une exception dans cette méthode ?
     - throws
 Quelle est la dernière version de Java ?
@@ -42,15 +56,23 @@ Qui est James Gosling ?
 
 Java Concept à assimiler :
 
+(public | protected | private) sont des modificateurs de visibilité
+
 Les imports static permets de pouvoir utiliser tous les champs statics ou toutes les méthodes static d'une classe ou d'une interface.
 
 Java est un language fortement typé.
 
 => Grace à la covariance des méthodes, on peut réécrire et donc redéfinir le type de retour d'une méthode du parent. (Avant java 5 cela n'était pas possible)
 
+String immutable :
+	. Lorsqu'on change la valeur d'une variable (String name = "foo") ---- (name = "bar") par exemple, la valeur en mémoire ne change pas. C'est une nouvelle valeur qui est créée et 'name'  pointe sur cette nouvelle addresse mémoire contenant cette nouvelle valeure. Il y a donc deux address mémoire dans le pool de String => 0x00011 => "foo" et 0x00012 => "bar"
+	. Le pool de string : Java créé ce String pool pour économiser de la mémoire : Si deux variable avec le même nom on la même valeur ex : - String name = "Rachid"; && - String anOtherName = "Rachid"; alors java vas créer seulement un emplacement en mémoire qui comporte la même valeur et faire poiter name & anOtherName sur la même addresse en mémoire contenant la valeur "Rachid";
+	. Un autre bénéfice des String immuables, c'est qu'ils sont thread safe !!
+
+
 1 => Variable de classe :
 	. Une variable de classe, est une variable DEVANT ÊTRE DECLARE STATIC
-	. La methode main doit toujours être déclarée en 'static' (Méthode de clas/zone.jse)
+	. La methode main doit toujours être déclarée en 'static' (Méthode de class)
 	- Son contenue est commun à toutes les instance de cette classe.
 
 2 => La surcharge de méthode (Method overloading) :
@@ -75,7 +97,7 @@ Java est un language fortement typé.
 	. Une class fille hérite des même caractéristiques qu'une class mère.
 	. Permet de spécialiser une classe. Ajouter ou modifier le comportement d'une classe, étendre son fonctionnement.
 	. En Java, l'héritage multiple n'est pas autorisé car il peut y avoir des ambiguités dans les noms de méthode et cela peut faire une pile d'exeption et faire planter l'application.
-	. Toutes que l'on créée hérite forcémenet (implicitement) de la classe Object.
+	. Toutes classe que l'on créée hérite forcémenet (implicitement) de la classe Object.
         - Il est interessant de redéfinir la méthode toString() de la classe Object dans nos propre classe.
         - Une bonne pratique serait de toujours redéfinir cette méthode, car elle permet d'obtenir une représentation, en chaîne de caractères, de chaque instance de notre classe
 
@@ -110,9 +132,15 @@ Java est un language fortement typé.
  		- Devant une variable, il permet à celle-ci de ne pas être modifié. Elle devient une constante.
 		- Par convention, le variable constante, doivent être écrite en MAJUSCULE.
 		- Les variables préfixé en final doivent forcément être initilisée.
+		le mot clès final : 3 différentes manières de l'utiliser :
+    		- Dans un class => public final class Animal : Les autres classes ne pourront pas hériter de la classe Animal
+    		- Dans une méthode => plubic final eat(); : Les classes fille ne peuvent pas Override la methode eat();
+    		- Dans une variable => final Dog myDog = new Dog(); : Dans ce la variable myDog ne peut pas être réinitialiser. Elle est initialisé qu'une seule et unique fois.
 
 12 => Les Interfaces :
 	. Une interface représente la capacité donné à une classes.
+	. Une interface n'est pas vraiment une classe mais un type.
+    . Une interface ne peut avoir que des méthodes public.
 	. En règle générale, les interfaces ont un nom qui se termine par "...able". ex : Iterable, Serializable, Appendable, ...
 
 13 => Les différentes collections : 
@@ -162,6 +190,7 @@ Java est un language fortement typé.
 	. 
 
 16 => Classe abstraite : mot clé 'abstract'
+    . Une classe abstraite c'est comme une classe normale, mais avec des méthodes abstraites.
 	. Une classe dite abstraite, est une classe qui ne peut pas être instancier.
 	. Une classe qui hérite d'une classe abstraite, doit impérativement redéfinir ses méthodes abstraite.
 
@@ -317,7 +346,7 @@ Site Initializr de Spring boot > start.spring.io > Spring Boot Starters
 
 =========== L'injection de dépendance ============== : Permet de valoriser les propriétés de chaques composants, à la volé en passant par les setteurs de ses propriétés.
 
-=========== L'inversion de contrôle (IOC) ============== : C'est le premier principe de Spring, il permet de créer les composants des différentes couches applicative, et de les mettreent en relation.
+=========== L'inversion de contrôle (IOC) ============== : C'est le premier principe de Spring, il permet de créer les composants des différentes couches applicative, et de les mettrent en relation.
 
 =========== le conteneur léger SPRING ============== : conciste en un fichier de configuration .xml qui permettra à spring d'instancier les bonnes classe, et faire l'inversion de contrôle.
 
@@ -327,3 +356,6 @@ Java config: Il est possible de remplacer le fichier de configuration .xml par u
 	- La classe de configuration doit être annotée @Configuration.
 	
 
+Les pools de string en Java ???
+
+String est immuable ???

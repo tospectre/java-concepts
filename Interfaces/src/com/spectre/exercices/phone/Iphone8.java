@@ -15,4 +15,14 @@ public class Iphone8 implements Phone {
     public int SpaceInGb() {
         return 64;
     }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }
