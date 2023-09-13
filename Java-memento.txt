@@ -1,87 +1,157 @@
-QUESTION JAVA : 
+================================================= QUESTION JAVA ========================================================
 
 Qu'est-ce qu'un type primitif ?
-c'est un type de données java dans lequel on stock des information de différentes nature  et qui n'est pas dans un objet ex
+    c'est un type de données java dans lequel on stock des information de différentes
+    nature et qui n'est pas dans un objet ex
 
-Type primitif  | 	                       Signification                                   |      Place occupée en mémoire
-byte 	       |      Entier très court allant de -128 à +127 	                           |       1 octet
-short 	       |      Entier court allant de -32768 à +32767 	                           |       2 octets
-int 	       |      Entier allant de -2 147 483 648 à +2 147 483 647 	                   |       4 octets
-long 	       |      Entier long allant de -263 à +263 -1 	                               |       8 octets
-float 	       |      Nombre réel allant de -1.4 * 10-45 à +3.4 * 1038 	                   |       4 octets
-double 	       |      Nombre réel double précision allant de 4.9 * 10-324 à +1.7 * 10308   |       8 octets
-char 	       |      Caractère unicode (65536 caractères possibles) 	                   |       2 octets
-boolean 	   |      variable booléenne (valeurs : vrai ou faux) 	                       |       1 octet
+    Type primitif  | 	                       Signification                                   |   Place en mémoire
+    byte 	       |      Entier très court allant de -128 à +127 	                           |       1 octet
+    short 	       |      Entier court allant de -32768 à +32767 	                           |       2 octets
+    int 	       |      Entier allant de -2 147 483 648 à +2 147 483 647 	                   |       4 octets
+    long 	       |      Entier long allant de -263 à +263 -1 	                               |       8 octets
+    float 	       |      Nombre réel allant de -1.4 * 10-45 à +3.4 * 1038 	                   |       4 octets
+    double 	       |      Nombre réel double précision allant de 4.9 * 10-324 à +1.7 * 10308   |       8 octets
+    char 	       |      Caractère unicode (65536 caractères possibles) 	                   |       2 octets
+    boolean 	   |      variable booléenne (valeurs : vrai ou faux) 	                       |       1 octet
 
-Quel est le but de la méthode public static void main dans un programme Java ?
-    - C'est le point d'entré d'un programme. C'est par cette méthode que ce programme démmare.
+Quel est le but de la méthode : "public static void main(String[] args){}" dans un programme Java ?
+    C'est le point d'entrée d'un programme. C'est par cette méthode que le programme démmare.
     
 Quelle est la différence entre System.out.println et System.err.println ?
-    - System.out.println() écrit sur la sortie standard, alors que System.err.println() écrit sur la sortie d'erreur.
+    System.out.println() écrit sur la sortie standard, alors que System.err.println() écrit sur la sortie d'erreur.
     
 Qu'est-ce qu'une interface en Java ?
-    - une interface represent une capacité que l'on shouaite donner à une classe
+    Une interface represent une capacité que l'on shouaite donner à une classe
 
 Qu'elle est la différence entre une classe abstraite et une interface ?
-    - Une classe abstraite est une classe qui ne peut pas être instancié, alors qu'une interface ce n'est pas une classe mais un type.
-    - Une interface contient uniquement des méthodes abstraite alors qu'une classe abstraite contient au moins une méthodes abstraite ou + mais peut aussi contenir des méthodes classiques.
-    - Une interface ne peut contenir que des methodes public alors qu'une classe abstraite peut avoir des méthodes protected ou private.
+    - Une classe abstraite est une classe qui ne peut pas être instancié, alors qu'une interface ce n'est pas une classe
+    mais un type.
+    - Une interface contient uniquement des méthodes abstraites alors qu'une classe abstraite contient au moins
+    une méthode abstraite ou + mais peut aussi contenir des méthodes classiques.
+    - Une interface ne peut contenir que des methodes public alors qu'une classe abstraite peut avoir des méthodes
+    protected ou private.
     
 Quand utiliseriez-vous une classe abstraite plutôt qu'une interface ?
-    - Généralement, on utilise les classes abstraites quand on sait qu'on aura une relation très forte au niveau de nos différentes classes, alors que pour une interface, on a pas vraiment besoin d'une relation forte.
-    - On utlisera une interface plutôt qu'une classe abstraite dans le cas ou on voudrai simuler de l'heritage multiple. ça evite d'avoir le fameux diamond problem.
-    - Aussi on utilise les interfaces quand on veut définir une structure dont on sait qu'elle ne vas pas changer beaucoup.
-
+    - Généralement, on utilise les classes abstraites quand on sait qu'on aura une relation très forte au niveau
+    de nos différentes classes, alors que pour une interface, on a pas vraiment besoin d'une relation forte.
+    - On utlisera une interface plutôt qu'une classe abstraite dans le cas ou on voudrai simuler de l'heritage multiple.
+     ça evite d'avoir le fameux diamond problem.
+    - Aussi on utilise les interfaces quand on veut définir une structure dont on sait qu'elle ne vas pas
+    changer beaucoup.
 
 Quelles sont les différences entre une méthode public et une méthode protected ?
-Qu'est-ce qu'une variable statique ?
-    - ce sont essentiellement des variables globales - toutes les intances de la classe partage la même variable
+    Une méthode "public" est accessible de n'importe où dans le programme, alors que le modificateur de visibilité
+    "protected", lui à une portée de classe, et aussi de package.
+
+Qu'est-ce qu'une variable static ?
+    Ce sont essentiellement des variables globales - toutes les intances de la classe partage la même variable.
+    Ces variables "static", sont aussi accessibles sans forcément créer une instance de l'objet.
+
 Qu'est-ce qu'une exception en Java ?
+    Une exception est en générale un événement non souhaité qui interompt le fonctionnement du programme
+
 Qu'est-ce qu'une checkException en Java ?
-    - C'est une exception que java nous oblige à traiter d'une manière ou d'une autre au moment de la compilation
+    C'est une exception que java nous oblige à traiter d'une manière ou d'une autre au moment de la compilation.
+    Avant meme que le programme compile, java nous oblige à corriger l'exception.
+
 Qu'est-ce qu'une unCheckedException en Java ?
-    - C'est une exception que java ne check pas au moment de la compilation
+    C'est une exception que java ne nous oblige pas à traiter et qui ne gène pas au moment de la compilation.
+    Toutes les 'unCheckedException' hérite forcément de la classe RuntimeException.
+
 Est-ce une bonne pratique d'attraper une RuntimeException ?
-	- Oui car cela permet de ne pas se retrouver avec des exceptions dont on ignore la provenance.
-Quel est le mot-clé à utiliser dans la signature d'une méthode pour permettre la non-réception d'une exception dans cette méthode ?
-    - throws
+    Oui. De la meme manière qu'une checkedException, c'est une bonne pratique d'attraper une RuntimeException.
+
+Quel est le mot-clé à utiliser dans la signature d'une méthode pour permettre la non-réception d'une exception dans
+cette méthode ?
+    throws
+
 Quelle est la dernière version de Java ?
-A quoi sert un garbage collector ?
+    Java 17
+
+Qu'est-ce que le garbage collector en Java et à quoi sert-il ?
+    C'est un programme permettant de manager automatiquement la mémoire grace un un thread appelé (GC).
+    Il tourne en Background, et gère la mémoire pour nous.
+
 Quelle est la différence entre un HashSet et un TreeSet ?
+    Le TreeSet va mettre la list dans un ordre naturel (alphabetique pour des strings) alors que le hashSet met les
+    éléments dans n'importe quelle ordre.
+
 Quelle méthode Thread est appelée lorsqu'un thread démarre ?
+    C'est la méthode start();
+
 Est-il possible de mettre à jour un objet String (sans utiliser l'introspection) ?
+    Non car l'objet "String" est immuable.
+
 Quel est le contrat entre les méthodes equals et hashcode ?
+
 Qui est James Gosling ?
+    c'est le créateur de Java.
+
+Qu'est-ce qu'un POJO en Java
+    POJO => Plain Old Java Object
+    Pour qu'un Objet soit un POJO, il ne doit pas :
+        1 - Etendre aucune autre classe
+        2 - Implémenter une interface
+        3 - Utiliser des annotations
+
+Qu'elle est la différence en une List et Un Set ?
+    La collection 'List' peut contenir deux éléments identiques alors qu'un 'Set' lui ne peut pas.
+
+Qu'est-ce que le pool de String en Java ?
+    C'est une sorte de stack créée par Java afin de stocker en mémoire les chaines de caractère pendant toutes la
+    durée du programme. Cela permet d'économiser de la mémoire.
+
+Qu'elle est la particularité de l'objet String ?
+    L'objet "String" est immuable. Java ne permet pas de changer une String en mémoire car une valeur en mémoire peut
+    etre référencé par plusieurs objets String. ex : si on a 10 objet String qui pointe sur une valeur en mémoire dans
+    le pool de string, et que cette valeur pouvait etre changée, alors cela changerai la valeur pour les 10 objets
+    String qui référence cette addresse en mémoire.
+
+Qu'est-ce que la programmation conccurente ?
+
+Que signifie le mot clé transient ?
 
 
-Java Concept à assimiler :
+========================================== Java Concept à assimiler ====================================================
 
-(public | protected | private) sont des modificateurs de visibilité
+=> (public | protected | private) sont des modificateurs de visibilité
 
-Les imports static permets de pouvoir utiliser tous les champs statics ou toutes les méthodes static d'une classe ou d'une interface.
+=> Les imports static permets de pouvoir utiliser tous les champs statics ou toutes les méthodes static d'une classe
+ou d'une interface.
 
-Java est un language fortement typé.
+=> Java est un language fortement typé.
 
-=> Grace à la covariance des méthodes, on peut réécrire et donc redéfinir le type de retour d'une méthode du parent. (Avant java 5 cela n'était pas possible)
+=> Grace à la covariance des méthodes, on peut réécrire et donc redéfinir le type de retour d'une méthode du parent.
+(Avant java 5 cela n'était pas possible)
 
-String immutable :
-	. Lorsqu'on change la valeur d'une variable (String name = "foo") ---- (name = "bar") par exemple, la valeur en mémoire ne change pas. C'est une nouvelle valeur qui est créée et 'name'  pointe sur cette nouvelle addresse mémoire contenant cette nouvelle valeure. Il y a donc deux address mémoire dans le pool de String => 0x00011 => "foo" et 0x00012 => "bar"
-	. Le pool de string : Java créé ce String pool pour économiser de la mémoire : Si deux variable avec le même nom on la même valeur ex : - String name = "Rachid"; && - String anOtherName = "Rachid"; alors java vas créer seulement un emplacement en mémoire qui comporte la même valeur et faire poiter name & anOtherName sur la même addresse en mémoire contenant la valeur "Rachid";
+=> String immuable :
+	. Lorsqu'on change la valeur d'une variable (String name = "foo") ---- (name = "bar") par exemple, la valeur
+	en mémoire ne change pas. C'est une nouvelle valeur qui est créée et l'objet 'name' pointe sur cette nouvelle
+	addresse en mémoire contenant cette nouvelle valeure. Il y a donc deux address mémoire dansle pool de String
+	=> 0x00011 => "foo" et 0x00012 => "bar"
 	. Un autre bénéfice des String immuables, c'est qu'ils sont thread safe !!
+	. La sécurité est aussi améliorée.
 
+=> Pool de string :
+    Java créé ce String pool pour économiser de la mémoire : Si deux variable avec le même
+	nom on la même valeur ex : - String name = "Rachid"; && - String anOtherName = "Rachid"; alors java vas créer
+	seulement un emplacement en mémoire qui comporte cette valeur et faire pointer name & anOtherName sur la même
+	addresse en mémoire contenant la valeur "Rachid". Cela évite de créer deux addresses en mémoire avec la meme valeur;
 
-1 => Variable de classe :
+=> Variable de classe :
 	. Une variable de classe, est une variable DEVANT ÊTRE DECLARE STATIC
 	. La methode main doit toujours être déclarée en 'static' (Méthode de class)
 	- Son contenue est commun à toutes les instance de cette classe.
 
-2 => La surcharge de méthode (Method overloading) :
- 	. Lorsque l'on veut qu'une méthode puisse fonctionner avec plusieurs types de données (String, int, double,...) on surcharge la méthode.
- 	  On change le type, et aussi (si besoin) le nombre des paramètres dans la méthode. Attention, afin que cela puisse fonctionner,
- 	  nous ne devons pas modifier le nom de la methode que l'on veut surcharger. Si le nom change alors le principe de surcharge de méthode ne fonctionnera pas.
+=> La surcharge de méthode (Method overloading) :
+ 	. Lorsque l'on veut qu'une méthode puisse fonctionner avec plusieurs types de données (String, int, double,...)
+ 	on surcharge la méthode. On change le type, et aussi (si besoin) le nombre des paramètres dans la méthode.
+ 	Attention, afin que cela puisse fonctionner, nous ne devons pas modifier le nom de la methode que
+ 	l'on veut surcharger. Si le nom change alors le principe de surcharge de méthode ne fonctionnera pas.
 
 3 => Le principe d'encapsulation :
-	. Si on veut protéger les informations d'un objet contre une modification innatendue, on utilisera le principe d'encapsulation.
+	. Si on veut protéger les informations d'un objet contre une modification innatendue,
+	on utilisera le principe d'encapsulation.
 	. Les données sont en "private", donc protégées contre les modifications depuis l'extérieur d'une classe.
 	. On devra alors utiliser des setteur pour modifier les données.
 	. Pour accéder en lecture aux données, alors on utilisera des getter. 
@@ -96,10 +166,12 @@ String immutable :
 	. Cela évite d'avoir à recoder des methodes générique.
 	. Une class fille hérite des même caractéristiques qu'une class mère.
 	. Permet de spécialiser une classe. Ajouter ou modifier le comportement d'une classe, étendre son fonctionnement.
-	. En Java, l'héritage multiple n'est pas autorisé car il peut y avoir des ambiguités dans les noms de méthode et cela peut faire une pile d'exeption et faire planter l'application.
+	. En Java, l'héritage multiple n'est pas autorisé car il peut y avoir des ambiguités dans les noms de méthode et
+	cela peut faire une pile d'exeption et faire planter l'application.
 	. Toutes classe que l'on créée hérite forcémenet (implicitement) de la classe Object.
         - Il est interessant de redéfinir la méthode toString() de la classe Object dans nos propre classe.
-        - Une bonne pratique serait de toujours redéfinir cette méthode, car elle permet d'obtenir une représentation, en chaîne de caractères, de chaque instance de notre classe
+        - Une bonne pratique serait de toujours redéfinir cette méthode, car elle permet d'obtenir une représentation,
+        en chaîne de caractères, de chaque instance de notre classe
 
 5 => Le polymorphisme :
 	. Ce concept complète celui de l'heritage.
@@ -124,7 +196,8 @@ String immutable :
   	. Un objet de type wrapper est immuable
   	. L'opération d'englober un types primitif dans un objet Wrapper est nommée "boxing"
   	. L'opération inverse est nommée "unboxing"
-  	. Avec le JDK 1.4, l'auto boxing/unboxing ne fonction pas. On doit donc utilisier la méthode valueOf() de la class Wrapper du type primitif en question.
+  	. Avec le JDK 1.4, l'auto boxing/unboxing ne fonction pas. On doit donc utilisier la méthode valueOf() de la
+  	class Wrapper du type primitif en question.
   	. Depuis JDK 1.5, la notion d'auto boxing/unboxing est introduite
 
  10 => Les mots clès :
@@ -134,14 +207,16 @@ String immutable :
 		- Les variables préfixé en final doivent forcément être initilisée.
 		le mot clès final : 3 différentes manières de l'utiliser :
     		- Dans un class => public final class Animal : Les autres classes ne pourront pas hériter de la classe Animal
-    		- Dans une méthode => plubic final eat(); : Les classes fille ne peuvent pas Override la methode eat();
-    		- Dans une variable => final Dog myDog = new Dog(); : Dans ce la variable myDog ne peut pas être réinitialiser. Elle est initialisé qu'une seule et unique fois.
+    		- Dans une méthode => public final eat(); : Les classes fille ne peuvent pas Override la methode eat();
+    		- Dans une variable => final Dog myDog = new Dog(); : Dans ce cas la variable myDog ne peut pas être
+    		changée. Elle est initialisé qu'une seule et unique fois.
 
 12 => Les Interfaces :
 	. Une interface représente la capacité donné à une classes.
 	. Une interface n'est pas vraiment une classe mais un type.
     . Une interface ne peut avoir que des méthodes public.
-	. En règle générale, les interfaces ont un nom qui se termine par "...able". ex : Iterable, Serializable, Appendable, ...
+	. En règle générale, les interfaces ont un nom qui se termine par "...able".
+	ex : Iterable, Serializable, Appendable, ...
 
 13 => Les différentes collections : 
 	. Une collection désigne un ensemble d'éléments sous forme d'objet
@@ -152,26 +227,32 @@ String immutable :
 
 	13.1 => Les "List"
 		. C'est une collection qui peut contenir plusieurs fois le même élément
-		. Deux façons d'implémenter une List : avec un 'ArrayList() (La classe la plus rapide en régle général)' ou un 'LikedList()'
-	13.2 => Mes "Set" 'Des ensembles'
+		. Deux façons d'implémenter une List : avec un 'ArrayList() (La classe la plus rapide en régle général)'
+		ou un 'LikedList()'
+	13.2 => Les "Set" 'Des ensembles'
 		. C'est une collection qui ne peut pas contenir deux fois le même élément
-		. Il existe plusieurs implémentations, la plus courrante c'est le 'HashSet() (La plus performante dans le cas général'$
-		. Si on ajout plusieurs fois un même élément, il n'y aura pas d'erreurs à la compilation, l'élément ajouté sera ignoré  mais l'élément ne sera comptabilisé qu'une seule fois
+		. Il existe plusieurs implémentations, la plus courrante c'est le
+		'HashSet() La plus performante dans le cas général'
+		. Si on ajout plusieurs fois un même élément, il n'y aura pas d'erreurs à la compilation,
+		l'élément ajouté sera ignoré  mais l'élément ne sera comptabilisé qu'une seule fois
 		. Cette collection n'est pas ordonnée
 		. Pas de méthode get() (On peut en passant par un tableau en utilisant toArray() qui transforme l'objet en tableau)
 		. Position des éléments totalement imprévisible
 	13.3 => La "Map"
 		. C'est un collection qui reférence chaque élément par une clé.
 		. On ne peut pas insérer deux fois la même clé dans une map.
-		. On peut insérer deux fois la même valeur
+		. On peut insérer deux fois la même valeur mais avec une clé différente.
 		. L'implémentation la plus courante de Map, est 'HashMap()'
 		. Pour ajouter un objet dans une map, on utilise la methode 'put()' qui prend en paramètre la clé et la valeur.
-		. En générale, les clés et les valeurs sont du même type lors de l'ajout d'un élément : On évitera d'avoir par exemple un <String, Voiture> Puis <Integer, Voiture> même si c'est possible
+		. En générale, les clés et les valeurs sont du même type lors de l'ajout d'un élément : On évitera d'avoir
+		par exemple un <String, Voiture> Puis <Integer, Voiture> même si c'est possible
 		  sans avoir défini au préalable nos type dans l'opérateur diamand.
 		. Dans l'opérateur diamand, il faudra préciser deux types, 'le type de la valeur' et 'le type de la clé'
-		. Chaque élément d'une map et stocké sous forme d'Objet, qui contiens l'ensemble {clé, valeur}. Le type de cet objet est : "Map.Entry"
+		. Chaque élément d'une map et stocké sous forme d'Objet, qui contiens l'ensemble {clé, valeur}.
+		Le type de cet objet est : "Map.Entry"
 		. Entry est une interface interne de Map
-		. Pour itérer dans une collection de type Map.Entry, donc dans l'ensemble {clé, valeur}, on utilisera map.EntrySet() (Un ensemble d'entrées).
+		. Pour itérer dans une collection de type Map.Entry, donc dans l'ensemble {clé, valeur}, on utilisera
+		map.EntrySet() (Un ensemble d'entrées).
 			- Exemple : 
 				Map<String, Voiture> map = new HashMap();
 				map.put("bmwi3", bmwi3);
@@ -185,7 +266,6 @@ String immutable :
 		. Ce design pattern répond au besoin de "dialogue" qui peut exister entre différents objets.
 		. Notion d'Observation entre deux objets.
 
-
 15 => Design Pattern : Factory
 	. 
 
@@ -193,20 +273,6 @@ String immutable :
     . Une classe abstraite c'est comme une classe normale, mais avec des méthodes abstraites.
 	. Une classe dite abstraite, est une classe qui ne peut pas être instancier.
 	. Une classe qui hérite d'une classe abstraite, doit impérativement redéfinir ses méthodes abstraite.
-
-
-
- - Primitive Data Types :
-		Data Type  	     Size(bits)	      Range
-		byte 	         8            -128..127
-		short 	         16	          -32,768..32,767
-		int 	         32			  -2,147,483,648.. 2,147,483,647
-		long	         64			  -9,223,372,036,854,775,808.. 9,223,372,036,854,775,807
-		float 	         32			  3.4e-0.38.. 3.4e+0.38
-		double 	         64			  1.7e-308.. 1.7e+308
-		char	         16			  Complete Unicode Character Set
-		Boolean	         1			  True, False
-
 
  - Java Operators
 	  Operator Type	    	Operators
@@ -218,7 +284,6 @@ String immutable :
 		Shift				<<, >>, >>>
 		Ternary				?:
 		Unary				++x, –x, x++, x–, +x, –x, !, ~
-
 
  - Java opérateurs ternaire :
 	Exemple :  
@@ -239,8 +304,10 @@ String immutable :
 						- Permet d'accroitre l'encapsulation
 						- Produire un code plus lisible et donc plus maintenable
 
-		. Généralités :	- Une classe interne appartient à une instance de sa classe externe, elle ne peut pas définir d'attributs ou de methodes statiques.
-						- Une classe interne peut accéder à tous les attributs et méthodes de la classe externe à laquelle elle appartient et inversement.
+		. Généralités :	- Une classe interne appartient à une instance de sa classe externe, elle ne peut pas définir
+		                d'attributs ou de methodes statiques.
+						- Une classe interne peut accéder à tous les attributs et méthodes de la classe externe
+						à laquelle elle appartient et inversement.
 						- Un classe interne peut avoir n'importe quelle visibilité
 		
 		. Les classes interne (Inner class) :
@@ -279,18 +346,23 @@ String immutable :
 					- Permet de grouper de façon logique les classes qui sont utilisées seulement à un endroit
 					- Augmente l'effet d'encapsulation, et permet d'avoir un code plus lisible et facile à maintenir.
 					- La portée d'une classe imbriquée est limitée par la portée de la classe qui l'englobe.
-					- Une classe imbriquée a accès aux membres, y compris les membres privés, de la classe dans laquelle elle est imbriquée. L'inverse n'est pas vrais.
+					- Une classe imbriquée a accès aux membres, y compris les membres privés, de la classe
+					dans laquelle elle est imbriquée. L'inverse n'est pas vrais.
 		
 18 => Redéfinition covariante des méthodes
 		. La redéfinition d'une méthode c'est lorsque une méthode d'une classe mère est redéfinie dans une class fille
 		. La redéfinition doit forcément avoir la même signature.
-		. La surcharge de méthodes (Methode overloading / voir Le point 2) c'est lorsqu'une méthode d'une classe mère est redéfinie dans une classe fille et que ses arguments sont diffèrent des arguments de la fonction initiale.
+		. La surcharge de méthodes (Methode overloading / voir Le point 2) c'est lorsqu'une méthode d'une classe mère
+		est redéfinie dans une classe fille et que ses arguments sont diffèrent des arguments de la fonction initiale.
 
 19 => Les Enums ou types Enumérés
-		. Une Enumération est un groupement logique de constantes (Ex : NORD, SUD, EST, OUEST) dont la valeur, le contenu, n'a que peu d'importance
+		. Une Enumération est un groupement logique de constantes (Ex : NORD, SUD, EST, OUEST) dont la valeur,
+		le contenu, n'a que peu d'importance
 		. Le mot clès enum, possède le même poids que le mot clef class. Une Enumération peut être déclarer partout
-		. De façon implicite, toute Enumération étend la classe java.lang.Enum (il n'est pas nécessaire de le déclarer dans les implémentations) ".... implement Enum"
-		. Pour une énumération basique, chaque constante de l'énumération se voit attribuer une valeur ordinale.Le premier élément de l'énumération possède automatiquement l'ordinal 0
+		. De façon implicite, toute Enumération étend la classe java.lang.Enum (il n'est pas nécessaire de le déclarer
+		dans les implémentations) ".... implement Enum"
+		. Pour une énumération basique, chaque constante de l'énumération se voit attribuer une valeur ordinale.
+		Le premier élément de l'énumération possède automatiquement l'ordinal 0
 		. Dans la pluspart des languages de programmation, les énumeration se limitent à une collection de constantes.
 		. En Java, une énumération est un réél objet. Donc il a accès à des méthodes.
 		. Une énumération peut donc avoir un ou plusieur constructeurs (toujours privé).
@@ -331,31 +403,35 @@ Hibernate se rajoute en dépendance dans un projet
 
 
 
-=====================================================================================================================
-												SPRING BOOT
-=====================================================================================================================
+========================================================================================================================
+												SPRING BOOT REVISIONS
+========================================================================================================================
 
-Site Initializr de Spring boot > start.spring.io > Spring Boot Starters
+Site Initializr de Spring boot > start.spring.io > Spring Boot Starters :
+    Permet d'initialiser un projet Spring en choisissant plusieurs options disponibles.
 
-=========== Programmation par contrat ============== : C'est l'utilisation d'un model de conception (Design pattern) Contract
-	. Permet de relacher les contraintes entres les différentes couche logiciel grâce à des interfaces ou parfois des classes abstraites.
+======================================== Programmation par contrat =====================================================
+C'est l'utilisation d'un model de conception (Design pattern) Contract
+	. Permet de relacher les contraintes entres les différentes couches logiciels grâce à des interfaces
+	ou parfois des classes abstraites.
 	. On passe d'un couplage fort à un couplage faible.
 
-	Java peut instancier des classes à la volé grâce à la reflexivité.
+Java peut instancier des classes à la volé grâce à la reflexivité.
 
+=========================================== L'injection de dépendance ==================================================
+Permet de valoriser les propriétés de chaques composants,à la volé en passant par les setteurs de ses propriétés.
 
-=========== L'injection de dépendance ============== : Permet de valoriser les propriétés de chaques composants, à la volé en passant par les setteurs de ses propriétés.
+============================================ L'inversion de contrôle (IOC) =============================================
+C'est le premier principe de Spring, il permet de créer les composants des différentes couches applicative,
+et de les mettrent en relation.
 
-=========== L'inversion de contrôle (IOC) ============== : C'est le premier principe de Spring, il permet de créer les composants des différentes couches applicative, et de les mettrent en relation.
+=========================================== le conteneur léger SPRING ==================================================
+conciste en un fichier de configuration .xml qui permettra à spring d'instancier les bonnes classe,
+et faire l'inversion de contrôle.
 
-=========== le conteneur léger SPRING ============== : conciste en un fichier de configuration .xml qui permettra à spring d'instancier les bonnes classe, et faire l'inversion de contrôle.
+Pour eviter un fichier de configuration .xml trop lourd et trop verbeux (XML Hell) on peut utiliser les annotations
+java Depuis Spring 2.5. Ces annotations permettent de configurer les applications.
 
-Pour eviter un fichier de configuration .xml trop lourd et trop verbeux (XML Hell) on peut utiliser les annotations java Depuis Spring 2.5. Ces annotations permettent de configurer les applications.
-
-Java config: Il est possible de remplacer le fichier de configuration .xml par une classe de configuration java. Cette classe servira exclusivement pour la configuration de l'application Spring.
+Java config: Il est possible de remplacer le fichier de configuration .xml par une classe de configuration java.
+Cette classe servira exclusivement pour la configuration de l'application Spring.
 	- La classe de configuration doit être annotée @Configuration.
-	
-
-Les pools de string en Java ???
-
-String est immuable ???
