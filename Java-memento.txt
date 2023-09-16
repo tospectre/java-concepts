@@ -77,7 +77,7 @@ Quelle est la différence entre un HashSet et un TreeSet ?
     éléments dans n'importe quelle ordre.
 
 Quelle méthode Thread est appelée lorsqu'un thread démarre ?
-    C'est la méthode start();
+    C'est la méthode Thread.start();
 
 Est-il possible de mettre à jour un objet String (sans utiliser l'introspection) ?
     Non car l'objet "String" est immuable.
@@ -111,6 +111,8 @@ Qu'est-ce que la programmation conccurente ?
 
 Que signifie le mot clé transient ?
 
+
+Qu'est-ce que la reflexivité
 
 ========================================== Java Concept à assimiler ====================================================
 
@@ -217,6 +219,8 @@ ou d'une interface.
     . Une interface ne peut avoir que des méthodes public.
 	. En règle générale, les interfaces ont un nom qui se termine par "...able".
 	ex : Iterable, Serializable, Appendable, ...
+	. Maintenant, avec le mot clè default dans une interface, on peut définir une implémentation
+	par défaut.
 
 13 => Les différentes collections : 
 	. Une collection désigne un ensemble d'éléments sous forme d'objet
@@ -404,7 +408,7 @@ Hibernate se rajoute en dépendance dans un projet
 
 
 ========================================================================================================================
-												SPRING BOOT REVISIONS
+												SPRING / SPRING BOOT REVISIONS
 ========================================================================================================================
 
 Site Initializr de Spring boot > start.spring.io > Spring Boot Starters :
@@ -424,6 +428,7 @@ Permet de valoriser les propriétés de chaques composants,à la volé en passan
 ============================================ L'inversion de contrôle (IOC) =============================================
 C'est le premier principe de Spring, il permet de créer les composants des différentes couches applicative,
 et de les mettrent en relation.
+C'est du code qui permet d'instancier les composants de l'architechture et les mettrent en relation grâce à l'injection de dépendance
 
 =========================================== le conteneur léger SPRING ==================================================
 conciste en un fichier de configuration .xml qui permettra à spring d'instancier les bonnes classe,
