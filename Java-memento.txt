@@ -408,7 +408,7 @@ Hibernate se rajoute en dépendance dans un projet
 
 
 ========================================================================================================================
-												SPRING / SPRING BOOT REVISIONS
+												SPRING / SPRING BOOT
 ========================================================================================================================
 
 Site Initializr de Spring boot > start.spring.io > Spring Boot Starters :
@@ -428,15 +428,83 @@ Permet de valoriser les propriétés de chaques composants,à la volé en passan
 ============================================ L'inversion de contrôle (IOC) =============================================
 C'est le premier principe de Spring, il permet de créer les composants des différentes couches applicative,
 et de les mettrent en relation.
-C'est du code qui permet d'instancier les composants de l'architechture et les mettrent en relation grâce à l'injection de dépendance
+C'est du code qui permet d'instancier les composants de l'architechture et les mettrent en relation grâce à
+l'injection de dépendance
 
 =========================================== le conteneur léger SPRING ==================================================
-conciste en un fichier de configuration .xml qui permettra à spring d'instancier les bonnes classe,
-et faire l'inversion de contrôle.
+conciste en un fichier de configuration .xml "applicationContext.xml" qui permettra à spring
+d'instancier les bonnes classe, et faire l'inversion de contrôle. Ce fichier se place dans la classPath dossier
+ressources de l'application.
 
-Pour eviter un fichier de configuration .xml trop lourd et trop verbeux (XML Hell) on peut utiliser les annotations
+Pour éviter un fichier de configuration .xml trop lourd et trop verbeux (XML Hell) on peut utiliser les annotations
 java Depuis Spring 2.5. Ces annotations permettent de configurer les applications.
 
-Java config: Il est possible de remplacer le fichier de configuration .xml par une classe de configuration java.
+                                  === Les différentes annotations ===
+L'annotation Spring @Autowired => par defaut, fait un autowiring byType.
+    - Cela permet de faire une injection de dépendance dans la propriété annotée sans passer par le setter !
+    - Cette annotation intervient au niveau du byteCode java, et donc la propriété annotée peut s'affranchir du
+    modificateur de visibilité
+
+L'annotation Spring @Value => Inject une valeur à une propriété.
+    - Il faut lui donner une valeur entre parenthèse ex @Value("VALEUR") 
+    - On peut mettre une clé de valeur en utilisant @Value("${toto.value}")
+
+L'annotation Spring @Component => Permet d'indiquer à spring que la class annotée est un composant à instancier.
+    - C'est une annotation générique
+    - Il existe des annotations filles permettant de stéréotyper les composants :
+        . @Controller => indique à Spring que le composant est de type controller
+        . @Service => indique à Spring que le composant est de type Service
+        . @Repository => indique à Spring que le composant est de type Repository
+
+L'annotation @SpringBootApplication => Elle permet d'indiquer la classe de démarrage (executable).
+    - Elle comprends entre autre, les annotations:
+        . @ComponentScan => Spring vas rechercher dans les packages de l'application toute les classes 'Composant'
+        annotées @Component ou stéréotypées '[@Controller / @Service / @Repository]'
+        . @EnableAutoConfiguration => Spring vas rechecher dans toutes les librairies du projet,
+        certaines classe annotées @Configuration.
+        . @Configuration => Permet d'indiquer que la classe annoté est une classe dans laquel il y a une configuration.
+
+L'annotation @RequestMapping => Permet de mapper les requêtes (requests) aux méthodes des controllers.
+    - Elle peut-être utilisé au niveau 'class' pour spécifier un mapping commun à toute la classe
+    - Elle peut-être utilisé de façon plus spécifique au niveau d'une méhtode.
+
+L'annotation @RestController => Lorsque dans une classe, toutes les méthodes sont dédiées aux échanges REST,
+    Il n'est pas necessaire d'annoter les méthondes avec le @ResponseBody. On peut directement annoter la
+    class avec un @RestController  
+
+                                  === Java config ===
+Il est possible de remplacer le fichier de configuration .xml par une classe de configuration java.
 Cette classe servira exclusivement pour la configuration de l'application Spring.
 	- La classe de configuration doit être annotée @Configuration.
+	- @PropertySource permet de definir l'emplacement du fichier de properties
+
+                                  === Design pattern IMMUTABLES ===
+ - Nomalement dans nos composants, on a des setters et de getter pour suivre la norme java bean (controversé à ce jour),
+ mais dans un soucis de sécurité, et pour répondre au design pattern IMMUTABLES, on retirera les setters, notre
+ composant devient alors immutable (on ne pourra plus facilement changer ses propriétés
+ durant l'exécution de l'application).
+ - Le design pattern IMMUTABLES impose cependant que les propriétés des composants soit obligatoirement valorisées.
+ - Il faudra donc marquer les propriétés en 'final' et les valoriser à la construction de l'objet.
+ - Il faut donc créer un constructeur qui reçoit en paramètre toutes les dépendances à injecter.
+ - l'avantage aussi s'est qu'on évite les NPE.
+ - l'application ne pourra démarrer que si toutes les dépendances sont satisfaites.
+ - De ce fait l'annotation @Autowired n'est plus nécessaire, car l'injection ne se fait plus par la propriété, mais par
+ le constructeur.
+
+                                  === Spring MVC ===
+- C'est un framework web MVC. Smillaire à Struts ou encore JSF (Java Server Faces). Il s'implémente coté serveur.
+- Spring MVC fait appel à un controleur frontal qui va attraper toutes les requêtes HTTP. Il s'agit d'une servlet.
+C'est la class "DispatcherServlet"
+- Le Backing Bean c'est une notion du framework MVC : Il s'agit de créer une classe permettant de collecter les
+informations du front office (forms, ets...);
+
+========================================================================================================================
+												SPRING DATA
+========================================================================================================================
+
+=========================================== JDBC =======================================================================
+ JDBC API : Librairie utilisé pour la connection aux base de données.
+
+=========================================== Hibernate ==================================================================
+ORM : Implémentation de JPA
+=========================================== JPA ========================================================================
